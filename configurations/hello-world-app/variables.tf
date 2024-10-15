@@ -11,12 +11,13 @@
 # ---------------------------------------------------------------------------------------------------------------------
 
 variable "LB_http_port" {
+  description = "Port the Load Balancer will listen to (not an webserver port)"
   type        = number
   default     = 80
 }
 
 variable "http_port" {
-  description = "Port the webserver will listen to on EC2 instances (not an LB port)"
+  description = "Port the webserver will listen to on EC2 instances (not a Load Balancer port)"
   type        = number
   default     = 8080
 }
@@ -36,7 +37,7 @@ variable "environment" {
 variable "aws_region" {
   description = "The AWS region to deploy resources in"
   type        = string
-  default     = "us-east-2" # You can set a default value
+  default     = "us-east-2"
 }
 
 variable "enable_egress" {
