@@ -32,11 +32,11 @@ module "vpc" {
   name = "TF-${basename(path.cwd)}"
   cidr = local.vpc_cidr
 
-  azs             = local.azs
+  azs = local.azs
 
   private_subnets = [for k, v in local.azs : cidrsubnet(local.vpc_cidr, 8, k)]
 
-  public_subnets =  [for k, v in local.azs : cidrsubnet(local.vpc_cidr, 8, k+100)]
+  public_subnets = [for k, v in local.azs : cidrsubnet(local.vpc_cidr, 8, k + 100)]
   #map_public_ip_on_launch = true
 
   tags = {

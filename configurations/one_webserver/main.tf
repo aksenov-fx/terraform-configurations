@@ -40,12 +40,13 @@ resource "local_file" "private_key" {
 # --- --- --- --- --- --- --- --- --- --- #
 
 module "one_webserver" {
-  source = "../../configurations_modules/one_webserver"
+  source = "git::https://github.com/aksenov-fx/terraform-modules.git//configurations_modules/one_webserver"
+  #source = "../../configurations_modules/one_webserver"
 
   ami_id        = data.aws_ami.ami.id
   instance_type = "t2.micro"
 
-  vpc_name = "TF-VPC1"
+  vpc_name           = "TF-VPC1"
   public_subnet_name = "TF-VPC1-public-us-east-2a"
 
   http_port   = var.http_port
@@ -58,9 +59,9 @@ module "one_webserver" {
     server_text = var.server_text
   }))
 
-  custom_tags = { 
-    name = "${basename(path.cwd)}-${var.environment}"
-    first_tag = "first_tag_value" 
+  custom_tags = {
+    name      = "${basename(path.cwd)}-${var.environment}"
+    first_tag = "first_tag_value"
   }
 
 }

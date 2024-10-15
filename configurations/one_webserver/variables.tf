@@ -25,7 +25,7 @@ variable "ssh_port" {
 variable "server_text" {
   description = "The text the web server should return"
   type        = string
-  default     = "Hello, world"
+  default     = "https://github.com/aksenov-fx/"
 }
 
 variable "ssh_keyname" {
