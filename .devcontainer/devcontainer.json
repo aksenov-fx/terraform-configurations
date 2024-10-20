@@ -1,7 +1,11 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/debian
 {
+<<<<<<< HEAD
 	"name": "Debian for Powershell/Terraform notebooks",
+=======
+	"name": "Debian with Terraform and Powershell",
+>>>>>>> e4bcd8d10b690a7997ee02d19c42169ca29ee76e
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
 	"features": {
