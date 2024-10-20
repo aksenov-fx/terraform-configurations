@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/debian
 {
-	"name": "Debian",
+	"name": "Debian for Powershell/Terraform notebooks",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
 	"features": {
@@ -16,7 +16,6 @@
 		"vscode": {
 		  "extensions": [
 			"ms-toolsai.jupyter",
-			"ms-python.python",
 			"ms-dotnettools.dotnet-interactive-vscode"
 		  ]
 		}
